@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'bootstrap/bootstrap.min.css' %}" rel="stylesheet" >
+    {% block css_files %}{% endblock css_files %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>{% block page_title %}{% endblock page_title %}</title>
+</head>
+<body>
+
+    <div class="container mt-5">
+    <button class="btn btn-primary">Bootstrap Test</button>
+</div>
+
+    {% block page_content %}{% endblock page_content %}
+    
+    {% block page_scripts %}{% endblock page_scripts %}
+    <script src="{% static 'bootstrap/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+</html>
+
+
+
+{% comment %} 
+اینجا با اینکه همه چیز اوکیه ولی باز هم بوت استرپ بصورت آفلاین برام بالا نمیاد :(
+{% endcomment %}
