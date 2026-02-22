@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "app1/blog.css" %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hi this is blog page...</h1>
+    <br>
+    <p>اگر بخوایی تعداد اون متغیر قابل پیشمایشت رو در بیاری باید از فیلتر لنث استفاده کنی </p>
+    like this: {{ name|length }}
+    <br>
+    <br>
+    <p> if you want to change your character to uppcase you should use this filter: upper </p>
+    like this: {{ name|upper }}
+    <br>
+    <br>
+    <p>if you want to change first character to uppcase you should use this filter: title</p>
+    like this: {{ name|title }}
+    <br>
+    <br>
+    <p>if the value is none or nothing, this default value show.</p>
+    like this: {{ name|default:"هرچی اینجا بگذاریم نمایش داده میشه ولی بشرطی که خالییییییی باشههههه"}}
+    <br><br>
+    
+    like this: {{ name|yesno:"این متغیر خالی نیست و اوکیه  , این متغیر خالیه لطفا تکمیلش کنید" }}
+</body>
+</html>
