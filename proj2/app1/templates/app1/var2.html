@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>here is for second variable and filtering...</h1><br><br>
+    <h2>variable is : "salam in matn baraye test hast"</h2><br><br>
+
+    <p>truncatechars:N</p>
+    <h3>{{ text|truncatewords:5 }}</h3><br>
+
+    <br><br>
+
+    <p>cut:“تموم نمونه های چیزی که اینجا قرار بدیم رو توی متن حذف میکنه”</p>
+    <h3>{{ text|cut:"in" }}</h3><br>
+    
+    <br><br>
+
+    <p>wordcount-> تعداد واژه های متن رو برمیگردونه  </p>
+    <h3>{{ text|wordcount }}</h3><br>
+
+    <br><br>
+
+    <p>capfirst</p>
+    <h3>{{ text|capfirst }}</h3><br>
+    
+    
+</body>
+</html>

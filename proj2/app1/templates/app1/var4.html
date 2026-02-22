@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>here is for 4th variable and filtering...</h1><br><br>
+    <h2>variable is : ['one','two','three']</h2><br><br>
+
+    <p>length</p>
+    <h3>{{ list|length }}</h3><br>
+
+    <br><br>
+
+    <p>first</p>
+    <h3>{{ list|first }}</h3><br>
+    
+    <p>last </p>
+    <h3>{{ list|last }}</h3><br>
+    
+    <br><br>
+
+    نمایش سه آیتم اول:
+    {% for item in list|slice:":3" %}
+    <h3>{{ item }}</h3>
+    {% endfor %}
+
+    
+    
+</body>
+</html>

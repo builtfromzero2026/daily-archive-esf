@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>here is for third variable and filtering...</h1><br><br>
+    <h2>variable is : ""</h2><br><br>
+
+    <p>default:“متن پیش‌فرض در صورت خالی بودن ” </p>
+    <h3>{{ nothing|default:"enter your name" }}</h3><br>
+
+    <br><br>
+
+    <p>default_if_none:“  فقط برای وقتی که متغیر نان است متن اینجا نشان داده میشود”</p>
+    <h3>{{ nothing|default_if_none:"چون متغیر خالیه و نان نیست احتمالا این متن رو نشونتون نده " }}</h3><br>
+    
+    <p>yesno:"بله,خیر"</p>
+    <h3>{{ nothing|yesno:"متغیرپر, متغیر خالی" }}</h3>
+    
+</body>
+</html>
