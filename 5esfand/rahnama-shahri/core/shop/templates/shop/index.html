@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'shop/index.css' %}">
+{% endblock css_files %}
+
+{% block page_title %}{% endblock page_title %}
+
+{% block page_content %}
+
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 align-items-center my-5">
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'shop/images/iran.jpg' %}" alt="..." /></div>
+            <div class="col-lg-5">
+                <h1 class="text-success" class="font-weight-light" >Iran & beautiful cities</h1>
+                <h5 class="text-primary">Iran has many beautiful places and we will show you only a few of them here. On this page you can see 3 cities of Iran and also see and enjoy the important and beautiful places of each city. Enduring Iran.  </h5>
+            </div>
+        </div>
+    
+
+<br><br><br>
+
+    {% for city, city_det in cities %}
+        <div class="row gx-4 gx-lg-5 d-flex">
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img class="d-block mx-auto" style="width: 350px; border-radius: 5px;" src="{% static 'shop/images/'|add:city_det.image' %}" alt="">
+                        <h2 class="card-title">{{ city }}</h2>
+                        <p class="card-text">{{ city_det.det     }}</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="{% url "city-det" city %}">More Info</a></div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+    </div>
+{% endblock page_content %}
+
+{% block page_scripts %}{% endblock page_scripts %}
